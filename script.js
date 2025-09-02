@@ -358,39 +358,39 @@ function addThemeToggleStyles() {
 }
 
 // Add some additional interactive features
-function addExtraFeatures() {
-    // Add visit counter to page title
-    let visitCount = localStorage.getItem('pageVisits') || 0;
-    visitCount = parseInt(visitCount) + 1;
-    localStorage.setItem('pageVisits', visitCount);
+// function addExtraFeatures() {
+//     // Add visit counter to page title
+//     let visitCount = localStorage.getItem('pageVisits') || 0;
+//     visitCount = parseInt(visitCount) + 1;
+//     localStorage.setItem('pageVisits', visitCount);
     
-    // Add welcome message for returning visitors
-    if (visitCount > 1) {
-        const welcomeMsg = document.createElement('div');
-        welcomeMsg.className = 'welcome-message';
-        welcomeMsg.innerHTML = `Welcome back! This is your ${visitCount}${visitCount === 2 ? 'nd' : visitCount === 3 ? 'rd' : 'th'} visit.`;
+//     // Add welcome message for returning visitors
+//     if (visitCount > 1) {
+//         const welcomeMsg = document.createElement('div');
+//         welcomeMsg.className = 'welcome-message';
+//         welcomeMsg.innerHTML = `Welcome back! This is your ${visitCount}${visitCount === 2 ? 'nd' : visitCount === 3 ? 'rd' : 'th'} visit.`;
         
-        const header = document.querySelector('.header');
-        header.appendChild(welcomeMsg);
+//         const header = document.querySelector('.header');
+//         header.appendChild(welcomeMsg);
         
-        // Add welcome message styles
-        const style = document.createElement('style');
-        style.textContent = `
-            .welcome-message {
-                background: rgba(255, 255, 255, 0.2);
-                color: white;
-                padding: 8px 16px;
-                border-radius: 20px;
-                font-size: 0.9rem;
-                margin-top: 16px;
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                animation: fadeInUp 1s ease-out 0.9s both;
-            }
-        `;
-        document.head.appendChild(style);
-    }
-}
+//         // Add welcome message styles
+//         const style = document.createElement('style');
+//         style.textContent = `
+//             .welcome-message {
+//                 background: rgba(255, 255, 255, 0.2);
+//                 color: white;
+//                 padding: 8px 16px;
+//                 border-radius: 20px;
+//                 font-size: 0.9rem;
+//                 margin-top: 16px;
+//                 backdrop-filter: blur(10px);
+//                 border: 1px solid rgba(255, 255, 255, 0.3);
+//                 animation: fadeInUp 1s ease-out 0.9s both;
+//             }
+//         `;
+//         document.head.appendChild(style);
+//     }
+// }
 
 // Initialize extra features
-setTimeout(addExtraFeatures, 2000);
+// setTimeout(addExtraFeatures, 2000);
